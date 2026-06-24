@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenCom - Pension Clearance Certificate Verification</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Certificate Card Container */
+        .certificate-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            text-align: center;
+        }
+
+        /* Logo Area placeholder using SVG to mimic the PenCom emblem structure */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .logo-mock {
+            width: 100px;
+            height: 110px;
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .logo-mock::before {
+            content: "🇳🇬";
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .logo-mock span {
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Typography */
+        h1 {
+            color: #2d3748;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        h2 {
+            color: #4a5568;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .certificate-number {
+            color: #4a5568;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #edf2f7;
+            margin-bottom: 35px;
+        }
+
+        /* Data Grid Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .data-table tr {
+            margin-bottom: 20px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .data-table td {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+
+        .label {
+            color: #4a5568;
+            font-weight: 600;
+            width: 40%;
+        }
+
+        .value {
+            color: #2d3748;
+            font-weight: 400;
+            width: 60%;
+            word-break: break-word;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                background-color: #ffffff; /* Matches mobile view variant */
+            }
+
+            .certificate-card {
+                border: none;
+                box-shadow: none;
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            h2 {
+                font-size: 0.95rem;
+            }
+
+            .label {
+                width: 100%;
+                margin-bottom: 4px;
+            }
+
+            .value {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            
+            .data-table tr {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificate-card">
+        <div class="logo-container">
+            <div class="logo-mock">
+                <span>PenCom</span>
+            </div>
+        </div>
+
+        <h1>National Pension Commission</h1>
+        <h2>Pension Clearance Certificate Verification</h2>
+        
+        <p class="certificate-number">Certificate Number : PCC001950723</p>
+        
+        <hr>
+
+        <table class="data-table">
+            <tr>
+                <td class="label">Employer Code:</td>
+                <td class="value">PR0001020899</td>
+            </tr>
+            <tr>
+                <td class="label">Company Name:</td>
+                <td class="value">DE ELIGIBLE COMPUTERS LTD</td>
+            </tr>
+            <tr>
+                <td class="label">RC No:</td>
+                <td class="value">1020899</td>
+            </tr>
+            <tr>
+                <td class="label">Date issued:</td>
+                <td class="value">29 JANUARY 2026</td>
+            </tr>
+            <tr>
+                <td class="label">Expiry Date</td>
+                <td class="value">31 DECEMBER 2026</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
